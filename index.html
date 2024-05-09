@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <!-- <div class="column">
+                <h2>Column 1</h2>
+                <p>This is the content of column 1.</p>
+            </div> -->
+            <div class="column">
+                <div class="navbar unselectable">
+                    <div class="clock">
+                        <div id="localTime"></div>
+                    </div>
+                    <div class="language-selector">
+                        <img id="region" class="target-div" src="./icons/flags/english.svg" style="height: 30px; width: 30px;" alt="region-shizzle" data-lang="en">
+                    </div>
+                    <div class="availability">
+                        <div class="ring-container">
+                            <div class="ringring"></div>
+                            <div class="dot"></div>
+                        </div>
+                        <p id="status">Available For Work</p>
+                    </div>
+                </div>
+                <div class="normal-line"></div>
+                <div class="row">
+                    <div></div>
+                        <div class="about-row">
+                            <img src="./profile.jpg" alt="Profile Image" class="profile-image">
+                            <div>
+                                <div class="hello-there unselectable">
+                                    <div class="hand">🖐</div>
+                                    <p class="dimmed" id="greeting">Hello, I Am</p>
+                                </div>
+                                <h3 id="specificH3">Domantas Bulotas</h3>
+                                <p class="dimmed" id="about-me">A 20 y.o self-taught web, software developer from Klaipeda, Lithuania, with a passion for reverse engineering and crafting quality products for others to use.</p>
+                                <button class="email scrambleButton btn unselectable" onclick="redirectToURL('mailto:domantas.bulotas@gmail.com')">GMAIL</button>
+                                <button class="discord scrambleButton btn unselectable" onclick="redirectToURL('https://discord.com/channels/@me/1107403641859616789')">DISCORD</button>
+                            </div>
+                        </div>
+                        <div></div>
+                </div>
+                <div class="dotted-line"></div>
+                <div class="row centered-columns unselectable">
+                    <div class="number-row">
+                        <h2>10+</h2>
+                        <p id="HC">Happy clients</p>
+                    </div>
+                    <div class="number-row">
+                        <h2>7+</h2>
+                        <p id="YOE">Years of experience</p>
+                    </div>
+                    <div class="number-row">
+                        <h2>25+</h2>
+                        <p id="CT">Completed tasks</p>
+                    </div>
+                </div>
+                <div class="normal-line"></div>
+                <div class="row fade">
+                    <div>
+                        <h2 style="margin-left: 5%;" id="ML">My languages</h2>
+                        <p style="margin-left: 5%;" id="MLD" class="dimmed">With what languages do I work with the most and how frequently do i use them.</p>
+                        <div class="dotted-line"></div>
+                        <div style="margin-left: 5%;">
+                            <br>
+                            <div style="display: flex; align-items: center;">
+                                <div style="margin-bottom: 5px; margin-right: 10px; display: flex; align-items: center; height: 50px; width: 50px; background-color: rgb(25, 25, 26); border-radius: 15px; border: 1px solid rgb(32, 32, 33); display: flex; align-items: center; justify-content: center;">
+                                    <img src="./icons/languages/ts.svg" style="height: 30px; width: 30px;" alt="">
+                                </div>
+                                <p>TypeScript</p>
+                                <div class="progress-6" style="width: 80%;"></div>
+                                <p>80%</p>
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <div style="margin-bottom: 5px; margin-right: 10px; display: flex; align-items: center; height: 50px; width: 50px; background-color: rgb(25, 25, 26); border-radius: 15px; border: 1px solid rgb(32, 32, 33); display: flex; align-items: center; justify-content: center;">
+                                    <img src="./icons/languages/js.svg" style="height: 30px; width: 30px;" alt="">
+                                </div>
+                                <p>JavaScript</p>
+                                <div class="progress-6" style="width: 100%;"></div>
+                                <p>100%</p>
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <div style="margin-bottom: 5px; margin-right: 10px; display: flex; align-items: center; height: 50px; width: 50px; background-color: rgb(25, 25, 26); border-radius: 15px; border: 1px solid rgb(32, 32, 33); display: flex; align-items: center; justify-content: center;">
+                                    <img src="./icons/languages/c++.svg" style="height: 50px; width: 50px;" alt="">
+                                </div>
+                                <p style="margin-right: 67px;">C++</p>
+                                <div class="progress-6" style="width: 70%;"></div>
+                                <p>70%</p>
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <div style="margin-bottom: 5px; margin-right: 10px; display: flex; align-items: center; height: 50px; width: 50px; background-color: rgb(25, 25, 26); border-radius: 15px; border: 1px solid rgb(32, 32, 33); display: flex; align-items: center; justify-content: center;">
+                                    <img src="./icons/languages/py.svg" style="height: 30px; width: 30px;" alt="">
+                                </div>
+                                <p style="margin-right: 38px;">Python</p>
+                                <div class="progress-6" style="width: 90%;"></div>
+                                <p>90%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="normal-line"></div>
+                <div class="row fade">
+                    <div>
+                        <h2 style="margin-left: 5%;" id="MS">My stacks</h2>
+                        <p style="margin-left: 5%;" class="dimmed" id="MSD">Commitment to staying updated with the latest design trends and techniques.</p>
+                        <div class="dotted-line"></div>
+                        <div class="centered-columns">
+                            <div class="container">
+                                <div class="item">
+                                    <div class="card" onclick="redirectToURL('https://notion.so')">
+                                        <div class="card-inner">
+                                            <div class="icon-container">
+                                                <img src="./icons/notion.svg" class="icon" alt="">
+                                            </div>
+                                            <div class="text-container">
+                                                <h3>Notion</h3>
+                                                <p class="dimmed">Productivity Tool</p>
+                                            </div>
+                                        </div>
+                                        <div class="btn-arrow">
+                                            <img src="./icons/arrow.svg" class="icon" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="card" onclick="redirectToURL('https://figma.com')">
+                                        <div class="card-inner">
+                                            <div class="icon-container">
+                                                <img src="./icons/figma.svg" class="icon" alt="">
+                                            </div>
+                                            <div class="text-container">
+                                                <h3>Figma</h3>
+                                                <p class="dimmed">Interface Design Tool</p>
+                                            </div>
+                                        </div>
+                                        <div class="btn-arrow">
+                                            <img src="./icons/arrow.svg" class="icon" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="card" onclick="redirectToURL('https://discord.com')">
+                                        <div class="card-inner">
+                                            <div class="icon-container">
+                                                <img src="./icons/discord-white.svg" class="icon" alt="">
+                                            </div>
+                                            <div class="text-container">
+                                                <h3>Discord</h3>
+                                                <p class="dimmed">Productivity Tool</p>
+                                            </div>
+                                        </div>
+                                        <div class="btn-arrow">
+                                            <img src="./icons/arrow.svg" class="icon" alt="">
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="item">
+                                    <div class="card" onclick="redirectToURL('https://asana.com')">
+                                        <div class="card-inner">
+                                            <div class="icon-container">
+                                                <img src="./icons/asana.svg" class="icon" alt="">
+                                            </div>
+                                            <div class="text-container">
+                                                <h3>Asana</h3>
+                                                <p class="dimmed">Productivity Tool</p>
+                                            </div>
+                                        </div>
+                                        <div class="btn-arrow">
+                                            <img src="./icons/arrow.svg" class="icon" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="card" onclick="redirectToURL('https://framer.com')">
+                                        <div class="card-inner">
+                                            <div class="icon-container">
+                                                <img src="./icons/framer.svg" class="icon" alt="">
+                                            </div>
+                                            <div class="text-container">
+                                                <h3>Framer</h3>
+                                                <p class="dimmed">No Code Design Tool</p>
+                                            </div>
+                                        </div>
+                                        <div class="btn-arrow">
+                                            <img src="./icons/arrow.svg" class="icon" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="card" onclick="redirectToURL('https://webflow.com')">
+                                        <div class="card-inner">
+                                            <div class="icon-container">
+                                                <img src="./icons/webflow.svg" class="icon" alt="">
+                                            </div>
+                                            <div class="text-container">
+                                                <h3>Webflow</h3>
+                                                <p class="dimmed">No Code Design Too</p>
+                                            </div>
+                                        </div>
+                                        <div class="btn-arrow">
+                                            <img src="./icons/arrow.svg" class="icon" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="normal-line"></div>
+                <div class="row fade" id="services">
+                    <div>
+                        <h2 style="margin-left: 5%;" id="MSER">My services</h2>
+                        <p style="margin-left: 5%;" id="MSERD" class="dimmed">Formulating comprehensive strategies to meet your design goals and exceed expectations.</p>
+                        <div class="dotted-line"></div>
+                        <div class="centered-columns" style="margin-left: 5%;">
+                            <div style="display: flex; justify-content: center;">
+                                <div style="margin: auto; width: 50%; height: 380px;">
+                                    <div style="padding: 15px; margin-bottom: 20px; width: 80%; background-color: rgb(10, 10, 11); border: 1px solid rgb(20, 20, 21); border-radius: 15px;">
+                                        <div style="display: flex; align-items: center;">
+                                            <div style="margin-top: 10px; margin-left: 10px; display: flex; align-items: center; height: 60px; width: 60px; background-color: rgb(25, 25, 26); border-radius: 15px; border: 1px solid rgb(32, 32, 33); display: flex; align-items: center; justify-content: center;">
+                                                <img src="./icons/webDesign.svg" style="height: 30px; width: 30px;" alt="">
+                                            </div>
+                                            <div style="margin-left: 15px;">
+                                                <h3 id="web_design">Web Design</h3>
+                                            </div>
+                                        </div>
+                                        <p style="margin-left: 10px;" class="dimmed" id="web_design_desc">Crafting visually captivating and user-friendly websites for online success.</p>
+                                    </div>
+                                    <div style="padding: 15px; margin-bottom: 20px; width: 80%; background-color: rgb(10, 10, 11); border: 1px solid rgb(20, 20, 21); border-radius: 15px;">
+                                        <div style="display: flex; align-items: center;">
+                                            <div style="margin-top: 10px; margin-left: 10px; display: flex; align-items: center; height: 60px; width: 60px; background-color: rgb(25, 25, 26); border-radius: 15px; border: 1px solid rgb(32, 32, 33); display: flex; align-items: center; justify-content: center;">
+                                                <img src="./icons/discord-white.svg" style="height: 30px; width: 30px;" alt="">
+                                            </div>
+                                            <div style="margin-left: 15px;">
+                                                <h3 id="discord_bot">Discord Bot Development</h3>
+                                            </div>
+                                        </div>
+                                        <p style="margin-left: 10px;" class="dimmed" id="discord_bot_desc">Crafting visually captivating and user-friendly discord bots for people to have fun.</p>
+                                    </div>
+                                </div>
+                                <div style="margin: auto; width: 50%; height: 380px;">
+                                    <div style="padding: 15px;  margin: auto; margin-bottom: 20px; width: 80%; background-color: rgb(10, 10, 11); border: 1px solid rgb(20, 20, 21); border-radius: 15px;">
+                                        <div style="display: flex; align-items: center;">
+                                            <div style="margin-top: 10px; margin-left: 10px; display: flex; align-items: center; height: 60px; width: 60px; background-color: rgb(25, 25, 26); border-radius: 15px; border: 1px solid rgb(32, 32, 33); display: flex; align-items: center; justify-content: center;">
+                                                <img src="./icons/graphicDesign.svg" style="height: 30px; width: 30px;" alt="">
+                                            </div>
+                                            <div style="margin-left: 15px;">
+                                                <h3 id="graphic_design">Graphic Design</h3>
+                                            </div>
+                                        </div>
+                                        <p style="margin-left: 10px;" class="dimmed" id="graphic_design_desc">Creating visually stunning designs that captivate and engage audiences.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="normal-line"></div>
+                <div class="row centered-columns">
+                    <p></p>
+                    <p id="rights" >@2024, All Rights Reserved</p>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <div class="circle"></div>
+    </body>
+    </html>
+</html>
